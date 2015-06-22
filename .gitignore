@@ -1,0 +1,36 @@
+### Logs
+logs
+*.log
+.log.*
+
+### Runtime data
+pids
+*.pid
+*.seed
+
+### Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
+### Users Environment Variables
+.lock-wscript
+
+### virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+###sublime
+*.sublime-*
+
+### OSX BS
+*.DS_Store
+
+### misc
+doc/*
+docs/*
+.idea/*
+pkg/*
+bin/*
+
+# Non-project specific src code
+src/tmp-*
+src/github.com/*
+src/golang.org/*
