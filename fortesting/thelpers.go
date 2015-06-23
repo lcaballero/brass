@@ -17,10 +17,6 @@ func TestMain(m *testing.M) {
 	os.Exit(m.Run())
 }
 
-func PwdForTesting(f string) string {
-	return filepath.Join(Pwd(), f)
-}
-
 func Dump(err error, parms ...interface{}) {
 	for _,e := range parms {
 		fmt.Println(e)
@@ -29,15 +25,15 @@ func Dump(err error, parms ...interface{}) {
 }
 
 func Join(root, file string) string {
-	return PwdForTesting(filepath.Join(root, file))
+	return filepath.Join(Pwd(), root, file)
 }
 
 
 func init() {
 	if Pwd() == "" {
 		msg := fmt.Sprintf(
-			"Need to set %s, typically done with `export %s=$(pwd)`\n",
-			TESTING_PWD, TESTING_PWD)
+			"Need to set %s, typically done with `export %s=$(pwd)` or `export %s=$GOPATH`\n",
+			TESTING_PWD, TESTING_PWD, TESTING_PWD)
 		panic(msg)
 	}
 }

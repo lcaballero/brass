@@ -5,10 +5,10 @@ import (
 	. "github.com/smartystreets/goconvey/convey"
 	"testing"
 	"time"
-	. "brass/fortesting"
+	. "github.com/nightshaders/brass/fortesting"
 )
 
-const target = "src/brass/.test_files/target"
+const target = "src/github.com/nightshaders/brass/.test_files/target"
 
 func SomeRoll() *Roll {
 	bank := NewBank("items-2")
